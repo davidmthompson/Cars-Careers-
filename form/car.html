@@ -14,29 +14,20 @@
         <a href="Main.html" target="Form"><button class="button-27" role="button" >Back</button></a>
         <!--Form-->
         <div class="container">
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="7f9b0b25-e5e6-40b3-89fb-1cb0384ee525">
-
-            <input type="hidden" name="subject" value="New Car Show Form Submit">
-            <input type="hidden" name="from_name" value="Car Show Reg">
-            <input 
-
-type="hidden" 
-name="redirect" 
-value="https://jchscarshow.com/submit.html"  />
+          <form action="https://sheetdb.io/api/v1/5scgm1sblefh0" method="POST" id="sheetdb-form">
 
             <label for="fname">Full Name</label>
-            <input type="text" id="fname" name="FullName" placeholder="Your name..">
+            <input type="text" id="fname" name="data[Name]" placeholder="Your name..">
         
             <label for="Email">Email</label>
-            <input type="text" id="Email" name="Email" placeholder="Your Email..">
+            <input type="text" id="Email" name="data[Email]" placeholder="Your Email..">
 
             <label for="Car">Cars Make Mould Year</label>
-            <input type="text" id="Car" name="Car" placeholder="Ford mustang 1999">
+            <input type="text" id="Car" name="data[Car]" placeholder="Ford mustang 1999">
         
         
             <label for="Info">Outstanding Features </label>
-            <textarea id="info" name="info" placeholder="Write about your car" style="height:200px"></textarea>
+            <textarea id="info" name="data[Features]" placeholder="Write about your car" style="height:200px"></textarea>
         
             <input type="submit" value="Submit" target = "_blank">
         
@@ -45,5 +36,21 @@ value="https://jchscarshow.com/submit.html"  />
         <!--End Of Form-->
       </main>
 </body>
-<script src="https://web3forms.com/client/script.js" async defer></script>
-</html>
+<script>
+  var form = document.getElementById('sheetdb-form');
+  
+  form.addEventListener("submit", e => {
+      e.preventDefault();
+  
+      fetch(form.action, {
+          method: "POST",
+          body: new FormData(document.getElementById("sheetdb-form")) 
+      })
+      .then(response => response.json())
+      .then((html) => {
+          // you can put any JS code here
+          window.open('2.html', '_blank'); 
+      });
+  });
+  </script>
+  </html>
