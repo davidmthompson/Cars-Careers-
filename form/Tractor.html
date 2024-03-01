@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/form.css">
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/form1.css">
+</head>
+<body>
+    <main>
+        <a href="Main.html" target="Form"><button class="button-27" role="button" >Back</button></a>
+        <!--Form-->
+        <div class="container">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="2a9ba229-1785-4bcf-8ee4-4a55e7331777">
+
+            <input type="hidden" name="subject" value="New Car Show Form Submit">
+
+            <input 
+type="hidden" 
+name="redirect" 
+value="https://jchscarshow.com/submit.html" />
+
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="FullName" placeholder="Your name..">
+        
+            <label for="Email">Email</label>
+            <input type="text" id="Email" name="Email" placeholder="Your Email..">
+
+            <label for="Car">Tractork Make Mould Year</label>
+            <input type="text" id="Car" name="Car" placeholder="Ford mustang 1999">
+        
+
+        
+            <label for="Info">Outstanding Features </label>
+            <textarea id="info" name="info" placeholder="Write about your car" style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+        
+          </form>
+        </div>
+        <!--End Of Form-->
+      </main>
+</body>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+</html>
