@@ -1,2 +1,2 @@
 # Cars-Careers-
-This GitHub repository is for the Junction city high school cars &amp; careers car show.
+This GitHub repository is for the Junction City High School Cars &amp; careers car show.
